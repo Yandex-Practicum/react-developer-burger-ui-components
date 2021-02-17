@@ -1,0 +1,36 @@
+.button {
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: var(--common-border-radius);
+}
+
+.button_type_primary {
+	color: var(--text-primary-color);
+	background: linear-gradient(63.18deg, #801ab3 0%, #4c4cff 100%);
+}
+
+.button_type_primary:hover {
+	box-shadow: 0px 0px 16px 8px rgba(51, 51, 255, 0.25), 0px 0px 8px 8px rgba(51, 51, 255, 0.25);
+	filter: drop-shadow(0px 4px 32px rgba(51, 51, 255, 0.5));
+	transition: var(--common-transition);
+}
+
+.button_type_primary:active {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);
+}
+
+.button_type_secondary {
+	color: var(--colors-interface-accent);
+	background: transparent;
+}
+
+.button_size_large {
+	padding: 20px 40px;
+}
+.button_size_medium {
+	padding: 16px 40px;
+}
+.button_size_small {
+	padding: 10px 32px;
+}
