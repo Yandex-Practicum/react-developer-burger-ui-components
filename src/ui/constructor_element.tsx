@@ -5,15 +5,15 @@ import './constructor_element.css';
 
 export const ConstructorElement: React.FC<{
   type?: 'top' | 'bottom';
-  isLocked?: Boolean;
+  isLocked?: boolean;
   handleClose?: () => void;
   text: string;
   thumbnail: string;
-  price: Number;
+  price: number;
 }> = ({type, text, thumbnail, price, isLocked, handleClose}) => {
     const className = clsx('constructor-element', {
         [`constructor-element_pos_${type}`]: type,
-    })
+    });
 
     const action = isLocked
         ? <LockIcon type="primary" />

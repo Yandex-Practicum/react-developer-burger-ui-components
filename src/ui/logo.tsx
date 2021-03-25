@@ -13,113 +13,113 @@ export const Logo = () => {
                 <path
                     d="M159.513 37.6331C160.013 37.0196 159.562 36.1398 158.77 36.1268C148.664 35.9604 140.212 36.1472 129.758 36.7832C128.967 36.8314 128.555 37.7311 129.083 38.3217C132.746 42.4201 138.074 45 144.004 45C150.26 45 155.845 42.1291 159.513 37.6331Z"
                     stroke="#4C4CFF"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
                 <path
                     d="M126.643 15.0579C126.252 15.7378 126.827 16.5294 127.606 16.436C139.173 15.048 147.698 14.6341 159.788 15.3703C160.575 15.4182 161.104 14.5873 160.668 13.9313C157.083 8.54757 150.958 5 144.004 5C136.576 5 130.093 9.04797 126.643 15.0579Z"
                     stroke="#4C4CFF"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <g filter="url(#filter1_f)">
                 <path
                     d="M159.513 37.6331C160.013 37.0196 159.562 36.1398 158.77 36.1268C148.664 35.9604 140.212 36.1472 129.758 36.7832C128.967 36.8314 128.555 37.7311 129.083 38.3217C132.746 42.4201 138.074 45 144.004 45C150.26 45 155.845 42.1291 159.513 37.6331Z"
                     stroke="#4C4CFF"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
                 <path
                     d="M126.643 15.0579C126.252 15.7378 126.827 16.5294 127.606 16.436C139.173 15.048 147.698 14.6341 159.788 15.3703C160.575 15.4182 161.104 14.5873 160.668 13.9313C157.083 8.54757 150.958 5 144.004 5C136.576 5 130.093 9.04797 126.643 15.0579Z"
                     stroke="#4C4CFF"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <path
                 d="M159.513 37.6331C160.013 37.0196 159.562 36.1398 158.77 36.1268C148.664 35.9604 140.212 36.1472 129.758 36.7832C128.967 36.8314 128.555 37.7311 129.083 38.3217C132.746 42.4201 138.074 45 144.004 45C150.26 45 155.845 42.1291 159.513 37.6331Z"
                 stroke="#4C4CFF"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M126.643 15.0579C126.252 15.7378 126.827 16.5294 127.606 16.436C139.173 15.048 147.698 14.6341 159.788 15.3703C160.575 15.4182 161.104 14.5873 160.668 13.9313C157.083 8.54757 150.958 5 144.004 5C136.576 5 130.093 9.04797 126.643 15.0579Z"
                 stroke="#4C4CFF"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M159.513 37.6331C160.013 37.0196 159.562 36.1398 158.77 36.1268C148.664 35.9604 140.212 36.1472 129.758 36.7832C128.967 36.8314 128.555 37.7311 129.083 38.3217C132.746 42.4201 138.074 45 144.004 45C150.26 45 155.845 42.1291 159.513 37.6331Z"
                 stroke="white"
-                stroke-width="0.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M126.643 15.0579C126.252 15.7378 126.827 16.5294 127.606 16.436C139.173 15.048 147.698 14.6341 159.788 15.3703C160.575 15.4182 161.104 14.5873 160.668 13.9313C157.083 8.54757 150.958 5 144.004 5C136.576 5 130.093 9.04797 126.643 15.0579Z"
                 stroke="white"
-                stroke-width="0.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <g filter="url(#filter2_f)">
                 <path
                     d="M163.859 27.4656C163.988 26.4133 163.172 25.5115 162.115 25.4264C149.235 24.3883 139.184 24.2251 125.89 24.9245C124.831 24.9802 123.99 25.8596 124.089 26.9156C124.23 28.4145 124.537 29.8654 124.991 31.2496C125.253 32.0473 126.032 32.5408 126.871 32.5118C139.383 32.0783 149.06 32.0468 161.196 32.3747C162.035 32.3973 162.811 31.8976 163.066 31.0975C163.439 29.9298 163.707 28.7155 163.859 27.4656Z"
                     stroke="#E33CD5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <g filter="url(#filter3_f)">
                 <path
                     d="M163.859 27.4656C163.988 26.4133 163.172 25.5115 162.115 25.4264C149.235 24.3883 139.184 24.2251 125.89 24.9245C124.831 24.9802 123.99 25.8596 124.089 26.9156C124.23 28.4145 124.537 29.8654 124.991 31.2496C125.253 32.0473 126.032 32.5408 126.871 32.5118C139.383 32.0783 149.06 32.0468 161.196 32.3747C162.035 32.3973 162.811 31.8976 163.066 31.0975C163.439 29.9298 163.707 28.7155 163.859 27.4656Z"
                     stroke="#E33CD5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <path
                 d="M163.859 27.4656C163.988 26.4133 163.172 25.5115 162.115 25.4264C149.235 24.3883 139.184 24.2251 125.89 24.9245C124.831 24.9802 123.99 25.8596 124.089 26.9156C124.23 28.4145 124.537 29.8654 124.991 31.2496C125.253 32.0473 126.032 32.5408 126.871 32.5118C139.383 32.0783 149.06 32.0468 161.196 32.3747C162.035 32.3973 162.811 31.8976 163.066 31.0975C163.439 29.9298 163.707 28.7155 163.859 27.4656Z"
                 stroke="#E33CD5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M163.859 27.4656C163.988 26.4133 163.172 25.5115 162.115 25.4264C149.235 24.3883 139.184 24.2251 125.89 24.9245C124.831 24.9802 123.99 25.8596 124.089 26.9156C124.23 28.4145 124.537 29.8654 124.991 31.2496C125.253 32.0473 126.032 32.5408 126.871 32.5118C139.383 32.0783 149.06 32.0468 161.196 32.3747C162.035 32.3973 162.811 31.8976 163.066 31.0975C163.439 29.9298 163.707 28.7155 163.859 27.4656Z"
                 stroke="white"
-                stroke-width="0.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <g filter="url(#filter4_f)">
                 <path
                     d="M124 20.5C126.667 18.5 129.333 18.5 132 20.5C134.667 22.5 137.333 22.5 140 20.5C142.667 18.5 145.333 18.5 148 20.5C150.667 22.5 153.333 22.5 156 20.5C158.667 18.5 161.333 18.5 164 20.5"
                     stroke="#00CCCC"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <g filter="url(#filter5_f)">
                 <path
                     d="M124 20.5C126.667 18.5 129.333 18.5 132 20.5C134.667 22.5 137.333 22.5 140 20.5C142.667 18.5 145.333 18.5 148 20.5C150.667 22.5 153.333 22.5 156 20.5C158.667 18.5 161.333 18.5 164 20.5"
                     stroke="#00CCCC"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
             <path
                 d="M124 20.5C126.667 18.5 129.333 18.5 132 20.5C134.667 22.5 137.333 22.5 140 20.5C142.667 18.5 145.333 18.5 148 20.5C150.667 22.5 153.333 22.5 156 20.5C158.667 18.5 161.333 18.5 164 20.5"
                 stroke="#00CCCC"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M124 20.5C126.667 18.5 129.333 18.5 132 20.5C134.667 22.5 137.333 22.5 140 20.5C142.667 18.5 145.333 18.5 148 20.5C150.667 22.5 153.333 22.5 156 20.5C158.667 18.5 161.333 18.5 164 20.5"
                 stroke="white"
-                stroke-width="0.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <g filter="url(#filter6_f)">
                 <ellipse
@@ -265,7 +265,7 @@ export const Logo = () => {
                 ry="0.75"
                 transform="matrix(0.885492 0.464655 0.464655 -0.885492 137.234 39.9812)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 cx="152.708"
@@ -274,14 +274,14 @@ export const Logo = () => {
                 ry="1"
                 transform="rotate(15 152.708 11.3542)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 rx="1"
                 ry="0.75"
                 transform="matrix(0.965926 -0.258819 -0.258819 -0.965926 150.16 39.9833)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 cx="142.5"
@@ -290,7 +290,7 @@ export const Logo = () => {
                 ry="1"
                 transform="rotate(180 142.5 12)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 cx="146.708"
@@ -299,14 +299,14 @@ export const Logo = () => {
                 ry="1"
                 transform="rotate(15 146.708 8.35415)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 rx="1"
                 ry="0.75"
                 transform="matrix(1 0 0 -1 144 41.75)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <ellipse
                 cx="135.793"
@@ -315,7 +315,7 @@ export const Logo = () => {
                 ry="1"
                 transform="rotate(-27.6879 135.793 10.5826)"
                 stroke="white"
-                stroke-width="0.5"
+                strokeWidth="0.5"
             />
             <path
                 d="M2.8 25.544C1.968 25.544 1.29067 25.304 0.768 24.824C0.256 24.3333 0 23.672 0 22.84C0 21.7413 0.432 20.9467 1.296 20.456C1.712 20.2213 2.21333 20.104 2.8 20.104H14.128V22.2H3.328C2.74133 22.2 2.448 22.424 2.448 22.872C2.448 23.32 2.74133 23.544 3.328 23.544L11.808 23.56C12.64 23.56 13.312 23.8053 13.824 24.296C14.3467 24.7867 14.608 25.448 14.608 26.28C14.608 27.4 14.176 28.1947 13.312 28.664C12.9067 28.888 12.4053 29 11.808 29H0V26.904L11.28 26.92C11.8667 26.92 12.16 26.6907 12.16 26.232C12.16 25.784 11.8667 25.56 11.28 25.56L2.8 25.544Z"
@@ -381,9 +381,9 @@ export const Logo = () => {
                     width="43.3185"
                     height="49"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -399,9 +399,9 @@ export const Logo = () => {
                     width="43.3185"
                     height="49"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -417,9 +417,9 @@ export const Logo = () => {
                     width="48.792"
                     height="17.013"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -435,9 +435,9 @@ export const Logo = () => {
                     width="48.792"
                     height="17.013"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -453,9 +453,9 @@ export const Logo = () => {
                     width="49.0001"
                     height="12"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -471,9 +471,9 @@ export const Logo = () => {
                     width="49.0001"
                     height="12"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -489,9 +489,9 @@ export const Logo = () => {
                     width="28.7952"
                     height="44.1873"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -507,9 +507,9 @@ export const Logo = () => {
                     width="28.7952"
                     height="44.1873"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                         mode="normal"
                         in="SourceGraphic"

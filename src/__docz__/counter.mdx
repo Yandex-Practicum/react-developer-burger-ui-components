@@ -1,0 +1,28 @@
+---
+name: Counter
+route: /counter
+---
+
+import { Playground, Props } from 'docz'
+import { Counter }  from '../ui/';
+
+
+# Counter
+
+
+
+## Basic usage
+
+<Playground>
+  <Counter count={1} size='default' />
+</Playground>
+
+### Small
+
+<Playground>
+  <Counter count={233} size='small' />
+</Playground>
+
+## Properties
+
+<Props of={Counter} />

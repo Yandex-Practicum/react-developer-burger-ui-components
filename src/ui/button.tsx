@@ -1,18 +1,18 @@
 import React from 'react';
-import './button.css';
+import styles from './button.module.css';
 
 export const Button: React.FC<{
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
 }> = ({ children, type = 'primary', size = 'medium' }) => {
-    const className = `button ${
-        type === 'primary' ? 'button_type_primary' : 'button_type_secondary'
+    const className = `${styles.button} ${
+        type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
     } ${
         size === 'medium'
-            ? 'button_size_medium'
+            ? styles.button_size_medium
             : size === 'small'
-            ? 'button_size_small'
-            : 'button_size_large'
+            ? styles.button_size_small
+            : styles.button_size_large
     }`;
 
     return <button className={className}>{children}</button>;
