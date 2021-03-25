@@ -1,0 +1,44 @@
+---
+name: Input
+route: /input
+---
+import { Playground, Props } from 'docz'
+import { Input }  from '../ui/';
+
+
+# Input
+
+
+## Basic usage
+
+<Playground>
+    {() => {
+        const [value, setValue] = React.useState('value');
+        const inputRef = React.useRef(null);
+        const onIconClick = () => {
+            setTimeout(() => inputRef.current.focus(), 0);
+            alert('Icon Click Callback');
+        };
+        return (
+           <Input
+               type={'text'}
+               placeholder={'placeholder'}
+               onChange={e=>setValue(e.target.value)}
+               icon={'CurrencyIcon'}
+               value={value}
+               name={"name"}
+               error={false}
+               ref={inputRef}
+               onIconClick={onIconClick}
+               errorText={'Ошибка'}
+               size={'default'}
+           />
+        )
+   }}
+</Playground>
+
+
+## Properties
+
+<Props of={Input} />
+

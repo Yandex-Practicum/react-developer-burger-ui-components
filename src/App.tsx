@@ -1,7 +1,54 @@
 import './styles.css';
-import React from 'react';
-import { Button, Logo, ConstructorElement, Tab } from './ui';
-import {CurrencyIcon, BurgerIcon, LockIcon, DragIcon, CloseIcon, ListIcon, ProfileIcon, EditIcon, InfoIcon, ShowIcon, HideIcon, LogoutIcon, CheckMarkIcon} from './ui/icons';
+import React, { useCallback, useRef, useState } from 'react';
+import { Button, Logo, ConstructorElement, Tab, Input } from './ui';
+import {
+    CurrencyIcon,
+    BurgerIcon,
+    LockIcon,
+    DragIcon,
+    CloseIcon,
+    ListIcon,
+    ProfileIcon,
+    EditIcon,
+    InfoIcon,
+    ShowIcon,
+    HideIcon,
+    LogoutIcon,
+    CheckMarkIcon,
+} from './ui/icons';
+import { Counter } from './ui/counter';
+import { PasswordInput } from './ui/password-input';
+import { EmailInput } from './ui/email-input';
+
+const Inputs = () => {
+    const [form, setValues] = useState({ email: '', password: '' });
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+        setValues({ ...form, [e.target.name]: e.target.value });
+
+    return (
+        <div>
+            <h2>Поля ввода</h2>
+            <div className={'mb-2'}>
+                <EmailInput value={form.email} onChange={onChange} name={'email'} />
+            </div>
+            <div className={'mb-2'}>
+                <PasswordInput value={form.password} onChange={onChange} name={'password'} />
+            </div>
+            <div className={'mb-2'}>
+                <EmailInput value={form.email} onChange={onChange} name={'email'} size="small" />
+            </div>
+            <div className={'mb-2'}>
+                <PasswordInput
+                    value={form.password}
+                    onChange={onChange}
+                    name={'password'}
+                    size="small"
+                />
+            </div>
+        </div>
+    );
+};
 
 export default function App() {
     return (
@@ -78,29 +125,58 @@ export default function App() {
                 <HideIcon type="success" />
                 <LogoutIcon type="success" />
             </div>
+            <div style={{ position: 'relative', margin: '0 auto', width: '32px', height: '32px' }}>
+                <Counter count={1} />
+            </div>
             <h2>Конструктор</h2>
-            <ConstructorElement text="Краторная булка N-200i (верх)" thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL" price={20}/>
-            <ConstructorElement type="top" text="Соус Spicy-X" price={320} thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL" isLocked />
-            <ConstructorElement type="bottom" text="Краторная булка N-200i (верх)" thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL" price={30} />
+            <ConstructorElement
+                text="Краторная булка N-200i (верх)"
+                thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL"
+                price={20}
+            />
+            <ConstructorElement
+                type="top"
+                text="Соус Spicy-X"
+                price={320}
+                thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL"
+                isLocked
+            />
+            <ConstructorElement
+                type="bottom"
+                text="Краторная булка N-200i (верх)"
+                thumbnail="https://img-fotki.yandex.ru/get/9/orlando56.a/0_6e47_375ad918_XL"
+                price={30}
+            />
 
             <div>
                 <h2>Типографика</h2>
                 <p>Определяется через CSS-классы</p>
-                <div style= {{textAlign: 'left', border: '2px dashed white'}} className="p-4">
-                    <h2 className="text text_type_main-large">Это большой заголовок, написанный основным шрифтом</h2>
-                    <h3 className="text text_type_main-medium">Этот текст для заголовков поменьше</h3>
-                    <p className="text text_type_main-default">Это текст, используемый по-умолчанию</p>
+                <div style={{ textAlign: 'left', border: '2px dashed white' }} className="p-4">
+                    <h2 className="text text_type_main-large">
+                        Это большой заголовок, написанный основным шрифтом
+                    </h2>
+                    <h3 className="text text_type_main-medium">
+                        Этот текст для заголовков поменьше
+                    </h3>
+                    <p className="text text_type_main-default">
+                        Это текст, используемый по-умолчанию
+                    </p>
                     <h1 className="text text_type_digits-large">1234567890</h1>
                     <p className="text text_type_digits-default">1234567890</p>
                 </div>
             </div>
             <div>
                 <h2>Табы</h2>
-                <ul style={{display: 'flex', listStyle: 'none', padding: '0'}}>
-                    <li className="mr-2"><Tab type="current" text="Вкладка" /></li>
-                    <li><Tab text="Другая вкладка" handleClick={() => alert('I 🖤 Burgers!')}/></li>
+                <ul style={{ display: 'flex', listStyle: 'none', padding: '0' }}>
+                    <li className="mr-2">
+                        <Tab type="current" text="Вкладка" />
+                    </li>
+                    <li>
+                        <Tab text="Другая вкладка" handleClick={() => alert('I 🖤 Burgers!')} />
+                    </li>
                 </ul>
             </div>
+            <Inputs />
         </div>
     );
 }
