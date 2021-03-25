@@ -1,5 +1,5 @@
 export default {
     typescript: true,
-    base: '/',
+    base: '/react-developer-burger-ui-components',
     dest: '/docs'
 };
