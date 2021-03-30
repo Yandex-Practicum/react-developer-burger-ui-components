@@ -1,26 +1,33 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "sourceRoot": "src",
+    "outDir": "lib",
+    "jsx": "react",
+    "noImplicitAny": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "downlevelIteration": true,
+    "noUnusedLocals": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "removeComments": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "noLib": false,
+    "lib": ["dom", "es5", "es2015"],
+    "typeRoots": ["node_modules/@types/jest"],
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "./src"
+  "exclude": [
+    "node_modules",
+    "lib",
+    "index.d.ts"
   ]
 }
