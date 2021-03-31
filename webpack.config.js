@@ -1,14 +1,21 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: '/src/index.tsx',
+    entry: './src/index.tsx',
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(ts|tsx)$/,
@@ -32,18 +39,11 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.css'],
     },
-    plugins: [
-        new MiniCssExtractPlugin({ filename: 'react-developer-burger-ui-components.css' }),
-        new webpack.ProvidePlugin({
-            React: 'react',
-        }),
-    ],
+    plugins: [new MiniCssExtractPlugin({ filename: 'react-developer-burger-ui-components.css' })],
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'lib'),
-        library: {
-            name: '@ya.praktikum/react-developer-burger-ui-components',
-            type: 'umd',
-        },
+        libraryTarget: 'commonjs',
+        library: '@ya.praktikum/react-developer-burger-ui-components',
     },
 };
