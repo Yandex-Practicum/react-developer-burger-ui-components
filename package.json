@@ -80,6 +80,7 @@
   },
   "scripts": {
     "build": "rimraf ./lib && webpack --mode production",
+    "build1": "npx tsc && npx babel ./src --out-dir lib",
     "test": "echo \"No tests to execute\" && exit 0",
     "docz:dev": "docz dev --debug",
     "docz:build": "docz build",
@@ -89,6 +90,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
     ]
   },
   "browserslist": {
