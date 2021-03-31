@@ -42,7 +42,7 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(__dirname, 'lib'),
         library: {
-            name: '@yandex.praktikum/react-developer-burger-ui-components',
+            name: '@ya.praktikum/react-developer-burger-ui-components',
             type: 'umd',
         },
     },
