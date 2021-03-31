@@ -5,7 +5,7 @@ name: React Developer Burger UI Components
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
@@ -29,6 +29,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@ya.praktikum'
       - run: npm ci
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
