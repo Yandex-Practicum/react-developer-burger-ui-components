@@ -3,6 +3,10 @@ __coverage__
 .npmrc
 .idea
 .gitignore
+.github
+.eslintrc
+.gitattributes
+.yarnignore
 .prettierrc
 jest.config.js
 src
