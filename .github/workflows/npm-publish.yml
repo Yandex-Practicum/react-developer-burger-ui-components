@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-          scope: '@ya.practicum'
+          scope: '@yandex.praktikum'
       - run: npm ci
       - run: npm publish
         env:

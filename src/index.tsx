@@ -1,16 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+    CurrencyIcon,
+    BurgerIcon,
+    LockIcon,
+    DragIcon,
+    CloseIcon,
+    ListIcon,
+    ProfileIcon,
+    EditIcon,
+    InfoIcon,
+    ShowIcon,
+    HideIcon,
+    LogoutIcon,
+    CheckMarkIcon,
+} from './icons';
+import './fonts/fonts.css';
+import './common.css';
+import './box.css';
+import { Button } from './button';
+import { PasswordInput } from './password-input';
+import { Counter } from './counter';
+import { EmailInput } from './email-input';
+import { Logo } from './logo';
+import { ConstructorElement } from './constructor_element';
+import { Tab } from './tab';
+import { Input } from './input';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export {
+    CurrencyIcon,
+    BurgerIcon,
+    LockIcon,
+    DragIcon,
+    CloseIcon,
+    ListIcon,
+    ProfileIcon,
+    EditIcon,
+    InfoIcon,
+    ShowIcon,
+    HideIcon,
+    LogoutIcon,
+    CheckMarkIcon,
+    EmailInput,
+    PasswordInput,
+    Counter,
+    Button,
+    Logo,
+    ConstructorElement,
+    Tab,
+    Input,
+};
