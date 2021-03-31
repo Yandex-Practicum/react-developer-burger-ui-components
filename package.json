@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "directories": {
-    "lib": "../lib",
+    "lib": "lib",
     "test": "__tests__"
   },
   "files": [
