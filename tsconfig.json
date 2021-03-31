@@ -6,7 +6,7 @@
     "sourceMap": true,
     "declaration": true,
     "sourceRoot": "src",
-    "outDir": "./lib",
+    "outDir": "lib",
     "jsx": "react",
     "noImplicitAny": true,
     "strict": true,
