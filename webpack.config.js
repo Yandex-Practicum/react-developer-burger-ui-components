@@ -33,7 +33,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', '.css'],
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({ filename: 'react-developer-burger-ui-components.css' }),
         new webpack.ProvidePlugin({
             React: 'react',
         }),
