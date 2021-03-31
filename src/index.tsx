@@ -13,9 +13,9 @@ import {
     LogoutIcon,
     CheckMarkIcon,
 } from './icons';
-import '../fonts/fonts.css';
-import '../common.css';
-import '../box.css';
+import './fonts/fonts.css';
+import './common.css';
+import './box.css';
 import { Button } from './button';
 import { PasswordInput } from './password-input';
 import { Counter } from './counter';

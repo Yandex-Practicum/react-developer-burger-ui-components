@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: '/src/index.tsx',
@@ -6,20 +8,42 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
+                test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
+                use: ['babel-loader', 'ts-loader'],
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/',
+                        },
+                    },
+                ],
             },
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.css'],
     },
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new webpack.ProvidePlugin({
+            React: 'react',
+        }),
+    ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'my-first-webpack.bundle.js',
+        filename: 'index.js',
+        path: path.resolve(__dirname, 'lib'),
+        library: {
+            name: '@yandex.praktikum/react-developer-burger-ui-components',
+            type: 'umd',
+        },
     },
 };

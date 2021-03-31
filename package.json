@@ -5,11 +5,14 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "directories": {
-    "lib": "lib",
+    "lib": "../lib",
     "test": "__tests__"
   },
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "files": [
-    "lib"
+    "../lib"
   ],
   "publishConfig": {
     "access": "public"
@@ -61,13 +64,17 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-add-react-displayname": "^0.0.5",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-typescript-to-proptypes": "^1.0.0",
+    "core-js": "^3.9.1",
     "css-loader": "^5.2.0",
     "docz": "2.3.1",
     "dot-json": "^1.2.0",
     "eslint": "^7.22.0",
+    "file-loader": "^6.2.0",
     "husky": "^4.2.5",
+    "mini-css-extract-plugin": "^1.4.0",
     "npx": "^10.2.2",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
@@ -83,9 +90,9 @@
     "react-dom": ">=16.9.0"
   },
   "scripts": {
-    "build": "npx tsc && npx babel ./src --out-dir lib",
+    "build": "rimraf ./lib && webpack --mode production",
     "test": "echo \"No tests to execute\" && exit 0",
-    "docz:dev": "docz dev",
+    "docz:dev": "docz dev --debug",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve"
   },
