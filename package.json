@@ -8,11 +8,8 @@
     "lib": "../lib",
     "test": "__tests__"
   },
-  "exports": {
-    ".": "./lib/index.js"
-  },
   "files": [
-    "../lib"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"
