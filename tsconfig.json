@@ -1,33 +1,23 @@
 {
   "compilerOptions": {
-    "module": "es6",
+    "rootDir": "src",
+    "module": "esnext",
     "target": "es5",
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "declaration": true,
-    "sourceRoot": "src",
-    "outDir": "lib",
-    "jsx": "react",
-    "noImplicitAny": true,
+    "lib": ["es6", "dom", "es2016", "es2017"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "strictBindCallApply": true,
-    "downlevelIteration": true,
-    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "declaration": true,
+    "declarationDir": "dist",
     "moduleResolution": "node",
-    "removeComments": true,
-    "emitDecoratorMetadata": false,
-    "experimentalDecorators": false,
-    "noLib": false,
-    "lib": ["dom", "es5", "es2015"],
-    "typeRoots": ["node_modules/@types/jest"],
-    "allowSyntheticDefaultImports": true
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react"
   },
-  "exclude": [
-    "./node_modules",
-    "lib",
-    "index.d.ts"
-  ]
+  "include": ["src/ui/**/*","src/index.tsx"]
 }
+

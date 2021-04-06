@@ -15,3 +15,6 @@ tslint.json
 tsconfig.json
 tsconfig.src.json
 yarn.lock
+__docz__
+tasks
+setupTests.ts
