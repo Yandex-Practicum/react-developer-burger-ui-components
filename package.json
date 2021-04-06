@@ -1,8 +1,52 @@
 {
-  "name": "react-developer-burger-ui-components",
-  "version": "1.0.0",
+  "name": "@ya.praktikum/react-developer-burger-ui-components",
+  "version": "1.2.9",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yandex-praktikum/react-developer-burger-ui-components.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "node ./tasks/prettify.js"
+    }
+  },
   "dependencies": {
+    "clsx": "^1.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-react-display-name": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/plugin-transform-typescript": "^7.6.0",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,40 +54,32 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "clsx": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-add-react-displayname": "^0.0.5",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-typescript-to-proptypes": "^1.0.0",
+    "cross-env": "^7.0.3",
     "docz": "^2.3.1",
+    "dot-json": "^1.2.0",
+    "eslint": "^7.11.0",
+    "husky": "^4.2.5",
+    "npx": "^10.2.2",
     "prettier": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "pretty-quick": "^3.1.0",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4",
+    "tsc": "^1.20150623.0",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "webpack": "4.44.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "clean:build": "rimraf dist",
+    "clean:docs": "rimraf docs",
+    "build": "npm run clean:build && npx tsc && npx babel ./src --out-dir dist --extensions \".ts,.tsx\" --copy-files --ignore typings.d.ts,setupTests.ts && rimraf dist/__docz__ && rimraf dist/tasks",
     "docz:dev": "docz dev",
-    "docz:build": "docz build",
+    "docz:build": "npm run clean:docs && docz build",
     "docz:serve": "docz build && docz serve"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

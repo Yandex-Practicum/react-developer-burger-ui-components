@@ -26,11 +26,23 @@
 }
 
 .button_size_large {
+	font-family: 'Jet Brains Mono';
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: normal;
 	padding: 20px 40px;
 }
 .button_size_medium {
+	font-family: 'Jet Brains Mono';
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: normal;
 	padding: 16px 40px;
 }
 .button_size_small {
+	font-family: 'JetBrains Mono';
+	font-size: 14px;
+	line-height: 1.43;
+	font-weight: normal;
 	padding: 10px 32px;
 }
