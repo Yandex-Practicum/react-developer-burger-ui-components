@@ -1,6 +1,6 @@
 type TIconTypes = 'secondary' | 'primary' | 'error' | 'success';
 
-export type TIconProps = { type: TIconTypes, onClick?:() => void; };
+export type TIconProps = { type: TIconTypes; onClick?: () => void };
 
 export const getIconColor = (type: TIconTypes) => {
     return `${

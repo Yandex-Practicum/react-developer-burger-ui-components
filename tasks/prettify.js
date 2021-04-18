@@ -9,7 +9,7 @@ const exec = function (command, silent) {
         silent: silent || false,
     });
     if (res.code !== 0) {
-        throw Error(res.stderr);
+        console.log(res.stdout);
     }
     return res.stdout;
 };
