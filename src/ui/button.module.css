@@ -3,6 +3,7 @@
 	cursor: pointer;
 	outline: none;
 	border-radius: var(--common-border-radius);
+	transition: var(--common-transition);
 }
 
 .button_type_primary {
@@ -13,16 +14,25 @@
 .button_type_primary:hover {
 	box-shadow: 0px 0px 16px 8px rgba(51, 51, 255, 0.25), 0px 0px 8px 8px rgba(51, 51, 255, 0.25);
 	filter: drop-shadow(0px 4px 32px rgba(51, 51, 255, 0.5));
-	transition: var(--common-transition);
 }
 
 .button_type_primary:active {
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);
+	opacity: 0.9;
+	/*background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);*/
 }
 
 .button_type_secondary {
 	color: var(--colors-interface-accent);
 	background: transparent;
+}
+
+.button_type_secondary:hover {
+	color: var(--text-primary-color);
+	opacity: 0.9;
+}
+
+.button_type_secondary:active {
+	color: var(--text-primary-color);
 }
 
 .button_size_large {

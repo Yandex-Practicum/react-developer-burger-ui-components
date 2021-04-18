@@ -1,20 +1,21 @@
 import React from 'react';
-import clsx from 'clsx';
-
-import './tab.css';
+import tab from './tab.module.css';
 
 export const Tab: React.FC<{
-    type?: 'current' | 'default';
-    text: string;
-    handleClick?: () => void;
-}> = ({ type, text, handleClick }) => {
-    const className = clsx('tab', {
-        [`tab_type_${type}`]: type,
-    });
+    active: boolean;
+    value: string;
+    onClick: (value: string) => void;
+}> = ({ active, value, children, onClick: handleClick }) => {
+    const className = `${tab.tab} ${active ? tab.tab_type_current : ''}`;
+    const onClick = React.useCallback(() => {
+        if (typeof handleClick === 'function') {
+            handleClick(value);
+        }
+    }, [handleClick, value]);
 
     return (
-        <div className={`${className} pt-2 pr-5 pb-2 pl-5`} onClick={handleClick}>
-            <span className="text text_type_main-default">{text}</span>
+        <div className={`${className} pt-2 pr-5 pb-2 pl-5 noselect`} onClick={onClick}>
+            <span className="text text_type_main-default">{children}</span>
         </div>
     );
 };
