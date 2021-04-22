@@ -7,5 +7,10 @@
 npm install @ya.praktikum/react-developer-burger-ui-components
 ```
 
+## Пример импорта компонента
+```
+import { Tab } from '@ya.praktikum/react-developer-burger-ui-components'
+```
+
 ## Документация
 Интерактивная документация находится [здесь](https://yandex-praktikum.github.io/react-developer-burger-ui-components/docs/)

@@ -16,7 +16,7 @@ export const ConstructorElement: React.FC<{
     });
 
     const action = isLocked ? (
-        <LockIcon type="primary" />
+        <LockIcon type="secondary" />
     ) : (
         <CloseIcon type="primary" onClick={handleClose} />
     );
@@ -30,7 +30,7 @@ export const ConstructorElement: React.FC<{
                     {price}
                     <CurrencyIcon type="primary" />
                 </span>
-                <span className="constructor-element__action">{action}</span>
+                <span className="constructor-element__action pr-1">{action}</span>
             </span>
         </div>
     );

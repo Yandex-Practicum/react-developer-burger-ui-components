@@ -1,8 +1,14 @@
 .constructor-element {
-    padding: 20px 35px;
+    padding: 16px 24px;
     display: inline-block;
     border-radius: var(--common-border-radius-s);
     background: var(--background-element);
+    width: 488px;
+    min-height: 48px;
+    font-family: 'Jet Brains Mono';
+    font-size: 16px;
+    line-height: 24px;
+    color: #F2F2F3;
 }
 
 .constructor-element_pos_top {
@@ -15,16 +21,16 @@
 
 .constructor-element__row {
     display: flex;
+    align-items: center;
 }
 
 .constructor-element__image {
-    width: 40px;
+    width: 80px;
     height: 40px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .constructor-element__text {
-    width: 230px;
     margin-right: 20px;
     display: inline-flex;
     align-items: center;
@@ -33,11 +39,15 @@
 }
 
 .constructor-element__price {
-    width: 60px;
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
     text-align: right;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 24px;
 }
 
 .constructor-element__price svg {
@@ -45,7 +55,7 @@
 }
 
 .constructor-element__action {
-    margin-left: 24px;
+    margin-left: 20px;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
