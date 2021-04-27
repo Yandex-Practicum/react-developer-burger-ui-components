@@ -3,7 +3,7 @@
     display: inline-block;
     border-radius: var(--common-border-radius-s);
     background: var(--background-element);
-    width: 488px;
+    max-width: 488px;
     min-height: 48px;
     font-family: 'Jet Brains Mono';
     font-size: 16px;
