@@ -30,7 +30,7 @@ export const ConstructorElement: React.FC<{
                     {price}
                     <CurrencyIcon type="primary" />
                 </span>
-                <span className="constructor-element__action pr-1">{action}</span>
+                <span className="constructor-element__action pr-2">{action}</span>
             </span>
         </div>
     );
