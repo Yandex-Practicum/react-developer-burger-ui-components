@@ -15,7 +15,6 @@ type TInputInterface = {
     disabled?: boolean;
     icon?: keyof TICons;
     errorText?: string;
-    successText?: string;
     size?: 'default' | 'small';
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
     onIconClick?(e: React.MouseEvent<HTMLDivElement>): void;
@@ -52,7 +51,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             error,
             value,
             errorText,
-            successText,
             disabled,
             onBlur,
             onFocus,
@@ -104,13 +102,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             const Icon = icon && Icons[icon];
             const hasAction = typeof onIconClick === 'function';
             const dumbIcon = disabled && !hasAction;
-            const iconType = dumbIcon
-                ? 'secondary'
-                : error
-                ? 'error'
-                : success
-                ? 'success'
-                : 'primary';
 
             return Icon ? (
                 <div
@@ -120,7 +111,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                     })}
                     onClick={onIconClickProxy}
                 >
-                    <Icon type={iconType} />
+                    <Icon type={dumbIcon ? 'secondary' : 'primary'} />
                 </div>
             ) : null;
         }, [icon, onIconClickProxy, disabled, onIconClick]);
@@ -140,17 +131,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             [error, errorText, size]
         );
 
-        const successToRender = useMemo(
-            () =>
-                success &&
-                successText && (
-                    <p className={clsx('input__success', { [`text_type_main-${size}`]: size })}>
-                        {successText}
-                    </p>
-                ),
-            [success, successText, size]
-        );
-
         return (
             <div className={'input__container'}>
                 <div
@@ -160,7 +140,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                         [`input_type_${type}`]: type,
                         [`input_size_${size}`]: size,
                         ['input_status_error']: error,
-                        ['input_status_success']: success,
                         ['input_status_disabled']: disabled,
                         ['input_status_active']: focus,
                     })}
@@ -195,7 +174,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                     {iconToRender}
                 </div>
                 {errorToRender}
-                {successToRender}
             </div>
         );
     }
