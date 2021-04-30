@@ -14,7 +14,7 @@ export const Tab: React.FC<{
     }, [handleClick, value]);
 
     return (
-        <div className={`${className} pt-2 pr-5 pb-2 pl-5 noselect`} onClick={onClick}>
+        <div className={`${className} pt-4 pr-10 pb-4 pl-10 noselect`} onClick={onClick}>
             <span className="text text_type_main-default">{children}</span>
         </div>
     );

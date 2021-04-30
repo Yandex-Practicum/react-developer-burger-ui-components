@@ -1,7 +1,7 @@
 .tab {
   cursor: pointer;
   background-color: var(--background-alt);
-  width: 148px;
+  min-width: 120px;
   text-align: center;
   box-shadow: inset 0px -1px 0px #2F2F37;
   color: var(--text-inactive-color);
