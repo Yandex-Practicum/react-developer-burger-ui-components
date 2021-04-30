@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { CurrencyIcon, CloseIcon, LockIcon } from './icons';
+import { CurrencyIcon, DeleteIcon, LockIcon } from './icons';
 import './constructor-element.css';
 
 export const ConstructorElement: React.FC<{
@@ -18,7 +18,7 @@ export const ConstructorElement: React.FC<{
     const action = isLocked ? (
         <LockIcon type="secondary" />
     ) : (
-        <CloseIcon type="primary" onClick={handleClose} />
+        <DeleteIcon type="primary" onClick={handleClose} />
     );
 
     return (
