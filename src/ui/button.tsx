@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import styles from './button.module.css';
 
 export const Button: React.FC<{
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
-}> = ({ children, type = 'primary', size = 'medium' }) => {
+    onClick?: (() => void) | ((e: SyntheticEvent) => void);
+}> = ({ children, type = 'primary', size = 'medium', onClick }) => {
     const className = `${styles.button} ${
         type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
     } ${
@@ -15,5 +16,9 @@ export const Button: React.FC<{
             : styles.button_size_large
     }`;
 
-    return <button className={className}>{children}</button>;
+    return (
+        <button onClick={onClick} className={className}>
+            {children}
+        </button>
+    );
 };
