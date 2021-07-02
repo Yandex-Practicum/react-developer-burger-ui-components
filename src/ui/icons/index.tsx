@@ -2,6 +2,10 @@ import { CurrencyIcon } from './currency-icon';
 import { BurgerIcon } from './burger-icon';
 import { LockIcon } from './lock-icon';
 import { DragIcon } from './drag-icon';
+import { DeleteIcon } from './delete-icon';
+import { ArrowUpIcon } from './arrow-up-icon';
+import { ArrowDownIcon } from './arrow-down-icon';
+import { MenuIcon } from './menu-icon';
 import { CloseIcon } from './close-icon';
 import { CheckMarkIcon } from './check-mark-icon';
 import { ListIcon } from './list-icon';
@@ -19,6 +23,10 @@ export type TICons = {
     BurgerIcon: React.FC<TIconProps>;
     LockIcon: React.FC<TIconProps>;
     DragIcon: React.FC<TIconProps>;
+    DeleteIcon: React.FC<TIconProps>;
+    ArrowUpIcon: React.FC<TIconProps>;
+    ArrowDownIcon: React.FC<TIconProps>;
+    MenuIcon: React.FC<TIconProps>;
     CloseIcon: React.FC<TIconProps>;
     CheckMarkIcon: React.FC<TIconProps>;
     ListIcon: React.FC<TIconProps>;
@@ -35,6 +43,10 @@ export {
     BurgerIcon,
     LockIcon,
     DragIcon,
+    DeleteIcon,
+    ArrowUpIcon,
+    ArrowDownIcon,
+    MenuIcon,
     CloseIcon,
     CheckMarkIcon,
     ListIcon,

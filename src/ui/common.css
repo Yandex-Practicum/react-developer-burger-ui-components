@@ -3,7 +3,7 @@
 	--background-alt: #131316;
 	--background-element: #2f2f37;
 	--offset-base-variable: 2px;
-	--offset-base-size: 8px;
+	--offset-base-size: 4px;
 	--top-constructor-item-border-radius: 88px 88px 40px 40px;
 	--bottom-constructor-item-border-radius: 40px 40px 88px 88px;
 
@@ -13,6 +13,7 @@
 	--text-inactive-color: #8585AD;
 	--colors-interface-accent: #4c4cff;
 	--colors-interface-error: #E52B1A;
+	--colors-interface-success: #00cccc;
 	scrollbar-color: #2F2F37 #8585AD;
 	scrollbar-width: thin;
 
@@ -78,11 +79,22 @@ body {
 	font-weight: normal;
 }
 
+.text_color_inactive {
+	color: var(--text-inactive-color);
+}
+
 .text_type_digits-default {
 	font-family: 'Iceland';
 	font-weight: normal;
 	font-size: 28px;
 	line-height: .86;
+}
+
+.text_type_digits-medium {
+	font-family: 'Iceland';
+	font-weight: normal;
+	font-size: 48px;
+	line-height: .75;
 }
 
 .text_type_digits-large {

@@ -102,6 +102,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             const Icon = icon && Icons[icon];
             const hasAction = typeof onIconClick === 'function';
             const dumbIcon = disabled && !hasAction;
+
             return Icon ? (
                 <div
                     className={clsx('input__icon', {
@@ -135,7 +136,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                 <div
                     /*eslint no-useless-computed-key: "off"*/
                     className={clsx('input', {
-                        [`pr-3 pl-3`]: size === 'default',
+                        [`pr-6 pl-6`]: size === 'default',
                         [`input_type_${type}`]: type,
                         [`input_size_${size}`]: size,
                         ['input_status_error']: error,
