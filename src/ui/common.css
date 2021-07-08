@@ -104,7 +104,25 @@ body {
 	line-height: .83;
 }
 
+.text_color_primary {
+	color: var(--text-primary-color)
+}
 
+.text_color_inactive {
+	color: var(--text-inactive-color)
+}
+
+.text_color_accent {
+	color: var(--colors-interface-accent)
+}
+
+.text_color_error {
+	color: var(--colors-interface-error)
+}
+
+.text_color_success {
+	color: var(--colors-interface-success)
+}
 
 .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
