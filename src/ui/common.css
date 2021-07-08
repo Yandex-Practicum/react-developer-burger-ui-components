@@ -26,13 +26,13 @@
 	}
 }
 
-body::-webkit-scrollbar {
+.custom-scroll::-webkit-scrollbar {
 	width: 12px;
 }
-body::-webkit-scrollbar-track {
+.custom-scroll::-webkit-scrollbar-track {
 	background: #2F2F37;
 }
-body::-webkit-scrollbar-thumb {
+.custom-scroll::-webkit-scrollbar-thumb {
 	background: #8585AD;
 	border: 3px solid #2F2F37;
 	border-radius: 6px;
