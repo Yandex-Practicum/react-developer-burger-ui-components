@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import styles from './button.module.css';
 
 export const Button: React.FC<{
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
-    onClick?: () => void;
+    onClick?: (() => void) | ((e: SyntheticEvent) => void);
 }> = ({ children, type = 'primary', size = 'medium', onClick }) => {
     const className = `${styles.button} ${
         type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
