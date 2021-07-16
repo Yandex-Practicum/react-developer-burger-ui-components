@@ -20,6 +20,10 @@ import {
     LogoutIcon,
     ProfileIcon,
     ShowIcon,
+    DeleteIcon,
+    ArrowUpIcon,
+    ArrowDownIcon,
+    MenuIcon,
 } from './ui/icons';
 
 import './ui/fonts/fonts.css';
@@ -48,4 +52,8 @@ export {
     LogoutIcon,
     ProfileIcon,
     ShowIcon,
+    DeleteIcon,
+    ArrowUpIcon,
+    ArrowDownIcon,
+    MenuIcon,
 };

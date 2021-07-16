@@ -26,17 +26,30 @@
 	}
 }
 
-body::-webkit-scrollbar {
+.custom-scroll::-webkit-scrollbar {
 	width: 12px;
 }
-body::-webkit-scrollbar-track {
+.custom-scroll::-webkit-scrollbar-track {
 	background: #2F2F37;
 }
-body::-webkit-scrollbar-thumb {
+.custom-scroll::-webkit-scrollbar-thumb {
 	background: #8585AD;
 	border: 3px solid #2F2F37;
 	border-radius: 6px;
 }
+
+.body::-webkit-scrollbar {
+	width: 12px;
+}
+.body::-webkit-scrollbar-track {
+	background: #2F2F37;
+}
+.body::-webkit-scrollbar-thumb {
+	background: #8585AD;
+	border: 3px solid #2F2F37;
+	border-radius: 6px;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -73,7 +86,7 @@ body {
 }
 
 .text_type_main-small {
-	font-family: 'JetBrains Mono';
+	font-family: 'Jet Brains Mono';
 	font-size: 14px;
 	line-height: 1.43;
 	font-weight: normal;
@@ -104,7 +117,25 @@ body {
 	line-height: .83;
 }
 
+.text_color_primary {
+	color: var(--text-primary-color)
+}
 
+.text_color_inactive {
+	color: var(--text-inactive-color)
+}
+
+.text_color_accent {
+	color: var(--colors-interface-accent)
+}
+
+.text_color_error {
+	color: var(--colors-interface-error)
+}
+
+.text_color_success {
+	color: var(--colors-interface-success)
+}
 
 .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
