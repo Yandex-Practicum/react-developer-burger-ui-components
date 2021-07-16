@@ -37,6 +37,19 @@
 	border: 3px solid #2F2F37;
 	border-radius: 6px;
 }
+
+.body::-webkit-scrollbar {
+	width: 12px;
+}
+.body::-webkit-scrollbar-track {
+	background: #2F2F37;
+}
+.body::-webkit-scrollbar-thumb {
+	background: #8585AD;
+	border: 3px solid #2F2F37;
+	border-radius: 6px;
+}
+
 body {
 	padding: 0;
 	margin: 0;
