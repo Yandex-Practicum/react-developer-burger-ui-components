@@ -5,8 +5,9 @@ export const Button: React.FC<{
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
     onClick?: (() => void) | ((e: SyntheticEvent) => void);
-    cleanProps?: { [key: string]: string };
-}> = ({ children, type = 'primary', size = 'medium', onClick, ...cleanProps }) => {
+    disabled?: boolean;
+    name?: string;
+}> = ({ children, type = 'primary', size = 'medium', onClick, disabled = false, name }) => {
     const className = `${styles.button} ${
         type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
     } ${
@@ -18,7 +19,7 @@ export const Button: React.FC<{
     }`;
 
     return (
-        <button {...cleanProps} onClick={onClick} className={className}>
+        <button disabled={disabled} name={name} onClick={onClick} className={className}>
             {children}
         </button>
     );
