@@ -56,3 +56,8 @@
 	font-weight: normal;
 	padding: 10px 32px;
 }
+.button[disabled] {
+	color: var(--text-inactive-color);
+	background: var(--colors-button-inactive);
+	pointer-events: none;
+}
