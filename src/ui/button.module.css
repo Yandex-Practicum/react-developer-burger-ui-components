@@ -56,8 +56,12 @@
 	font-weight: normal;
 	padding: 10px 32px;
 }
-.button[disabled] {
+.button_type_primary[disabled] {
 	color: var(--text-inactive-color);
 	background: var(--colors-button-inactive);
+	pointer-events: none;
+}
+.button_type_secondary[disabled] {
+	color: var(--text-inactive-color);
 	pointer-events: none;
 }
