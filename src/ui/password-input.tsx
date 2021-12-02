@@ -5,7 +5,7 @@ export const PasswordInput = ({
     value,
     onChange,
     name,
-    size = 'default',
+    size,
 }: {
     value: string;
     name: string;
@@ -54,7 +54,7 @@ export const PasswordInput = ({
             error={error}
             onIconClick={onIconClick}
             errorText={'Некорректный пароль'}
-            size={size}
+            size={size === 'small' ? 'small' : 'default'}
         />
     );
 };
