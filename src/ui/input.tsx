@@ -6,10 +6,9 @@ import './input.css';
 import { TICons } from './icons';
 
 type TInputInterface = {
+    value: string;
     type?: 'text' | 'email' | 'password';
     placeholder?: string;
-    value: string;
-    name?: string;
     success?: boolean;
     error?: boolean;
     disabled?: boolean;
@@ -20,6 +19,7 @@ type TInputInterface = {
     onIconClick?(e: React.MouseEvent<HTMLDivElement>): void;
     onBlur?(e?: React.FocusEvent<HTMLInputElement>): void;
     onFocus?(e?: React.FocusEvent<HTMLInputElement>): void;
+    rest?: { [key: string]: string | number | boolean };
 };
 
 function useCombinedRefs<T = HTMLElement>(
@@ -46,7 +46,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             onChange,
             icon,
             onIconClick,
-            name,
             success,
             error,
             value,
@@ -55,6 +54,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             onBlur,
             onFocus,
             size = 'default',
+            ...rest
         },
         forwardedRef
     ) => {
@@ -167,9 +167,9 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                         type={type}
                         ref={ref}
                         onChange={onChange}
-                        name={name}
                         value={value}
                         disabled={disabled}
+                        {...rest}
                     />
                     {iconToRender}
                 </div>

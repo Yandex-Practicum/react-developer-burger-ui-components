@@ -1,19 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { Input } from './input';
 
-export const PasswordInput = ({
-    value,
-    onChange,
-    name,
-    size,
-}: {
+export const PasswordInput: React.FC<{
     value: string;
-    name: string;
     size?: 'default' | 'small';
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
-}) => {
+    rest?: { [key: string]: string | number | boolean };
+}> = ({ value, onChange, size, ...rest }) => {
     const [visible, setVisible] = useState(false);
-
     const [error, setError] = useState(false);
 
     const inputRef = useRef<HTMLInputElement>(null);
@@ -50,11 +44,11 @@ export const PasswordInput = ({
             ref={inputRef}
             onBlur={onBlur}
             onFocus={onFocus}
-            name={name}
             error={error}
             onIconClick={onIconClick}
             errorText={'Некорректный пароль'}
             size={size === 'small' ? 'small' : 'default'}
+            {...rest}
         />
     );
 };
