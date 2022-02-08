@@ -20,7 +20,12 @@ import { EmailInput }  from '../';
         const onChange = (e) => {
             setValue(e.target.value);
         };
-        return <EmailInput onChange={onChange} value={value} name={'email'} />;
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px'}}>
+                <EmailInput onChange={onChange} value={value} name={'email'} placeholder="Логин" isIcon={true} />
+                <EmailInput onChange={onChange} value={value} name={'email'} isIcon={false} />
+            </div>
+        )
    }}
 </Playground>
 

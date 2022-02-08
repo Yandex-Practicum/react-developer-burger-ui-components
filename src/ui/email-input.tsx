@@ -6,18 +6,15 @@ const validateEmail = (email: string) => {
     return re.test(email);
 };
 
-export const EmailInput = ({
-    value,
-    onChange,
-    name,
-    size = 'default',
-}: {
+export const EmailInput: React.FC<{
     value: string;
-    name: string;
     size?: 'default' | 'small';
+    placeholder?: string;
+    isIcon?: boolean;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
-}) => {
-    const [fieldDisabled, setDisabled] = useState(true);
+    rest?: { [key: string]: string | number | boolean };
+}> = ({ value, onChange, size = 'default', placeholder = 'E-mail', isIcon = false, ...rest }) => {
+    const [fieldDisabled, setDisabled] = useState(isIcon);
 
     const [error, setError] = useState(false);
 
@@ -42,24 +39,24 @@ export const EmailInput = ({
         } else {
             setError(false);
         }
-        setDisabled(true);
+        isIcon && setDisabled(true);
     };
     return (
         <Input
             type="email"
-            placeholder="Email"
+            placeholder={placeholder}
             onChange={onChange}
-            icon={'EditIcon'}
+            icon={isIcon ? 'EditIcon' : undefined}
             value={value}
             ref={inputRef}
             onBlur={onBlur}
             onFocus={onFocus}
-            name={name}
             error={error}
             disabled={fieldDisabled}
             onIconClick={onIconClick}
             errorText={'Ой, произошла ошибка!'}
             size={size}
+            {...rest}
         />
     );
 };
