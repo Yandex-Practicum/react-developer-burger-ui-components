@@ -6,8 +6,17 @@ export const Button: React.FC<{
     size?: 'small' | 'medium' | 'large';
     onClick?: (() => void) | ((e: SyntheticEvent) => void);
     htmlType?: 'button' | 'submit' | 'reset';
+    extraClass?: string;
     rest?: { [key: string]: string | number | boolean };
-}> = ({ children, type = 'primary', size = 'medium', onClick, htmlType, ...rest }) => {
+}> = ({
+    children,
+    type = 'primary',
+    size = 'medium',
+    onClick,
+    htmlType,
+    extraClass = '',
+    ...rest
+}) => {
     const className = `${styles.button} ${
         type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
     } ${
@@ -16,7 +25,7 @@ export const Button: React.FC<{
             : size === 'small'
             ? styles.button_size_small
             : styles.button_size_large
-    }`;
+    } ${extraClass}`;
 
     return (
         <button type={htmlType} onClick={onClick} className={className} {...rest}>

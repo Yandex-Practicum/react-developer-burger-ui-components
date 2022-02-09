@@ -4,8 +4,9 @@ import styles from './counter.module.css';
 export const Counter: React.FC<{
     count: number;
     size?: 'default' | 'small';
-}> = ({ count = 0, size = 'default' }: { count: number; size?: 'default' | 'small' }) => {
-    const className = `${styles.counter} ${styles[size]}`;
+    extraClass?: string;
+}> = ({ count = 0, size = 'default', extraClass = '' }) => {
+    const className = `${styles.counter} ${styles[size]} ${extraClass}`;
 
     return (
         <div className={className}>

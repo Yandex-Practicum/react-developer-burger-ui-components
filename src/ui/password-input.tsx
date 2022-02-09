@@ -6,9 +6,18 @@ export const PasswordInput: React.FC<{
     placeholder?: string;
     size?: 'default' | 'small';
     icon?: 'HideIcon' | 'ShowIcon' | 'EditIcon';
+    extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
     rest?: { [key: string]: string | number | boolean };
-}> = ({ value, placeholder = 'Пароль', onChange, size, icon = 'ShowIcon', ...rest }) => {
+}> = ({
+    value,
+    placeholder = 'Пароль',
+    onChange,
+    size,
+    icon = 'ShowIcon',
+    extraClass = '',
+    ...rest
+}) => {
     const [visible, setVisible] = useState(false);
     const [currentIcon, setCurrentIcon] = useState(icon);
     const [fieldDisabled, setDisabled] = useState(icon === 'EditIcon');
@@ -65,6 +74,7 @@ export const PasswordInput: React.FC<{
             errorText={'Некорректный пароль'}
             size={size === 'small' ? 'small' : 'default'}
             disabled={fieldDisabled}
+            extraClass={extraClass}
             {...rest}
         />
     );

@@ -11,9 +11,18 @@ export const EmailInput: React.FC<{
     size?: 'default' | 'small';
     placeholder?: string;
     isIcon?: boolean;
+    extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
     rest?: { [key: string]: string | number | boolean };
-}> = ({ value, onChange, size = 'default', placeholder = 'E-mail', isIcon = false, ...rest }) => {
+}> = ({
+    value,
+    onChange,
+    size = 'default',
+    placeholder = 'E-mail',
+    isIcon = false,
+    extraClass = '',
+    ...rest
+}) => {
     const [fieldDisabled, setDisabled] = useState(isIcon);
 
     const [error, setError] = useState(false);
@@ -56,6 +65,7 @@ export const EmailInput: React.FC<{
             onIconClick={onIconClick}
             errorText={'Ой, произошла ошибка!'}
             size={size}
+            extraClass={extraClass}
             {...rest}
         />
     );
