@@ -5,7 +5,7 @@ import * as Icons from './icons';
 import './input.css';
 import { TICons } from './icons';
 
-type TInputInterface = {
+interface TInputInterface extends Omit<React.HTMLProps<HTMLInputElement>, 'size'> {
     value: string;
     type?: 'text' | 'email' | 'password';
     placeholder?: string;
@@ -20,8 +20,7 @@ type TInputInterface = {
     onIconClick?(e: React.MouseEvent<HTMLDivElement>): void;
     onBlur?(e?: React.FocusEvent<HTMLInputElement>): void;
     onFocus?(e?: React.FocusEvent<HTMLInputElement>): void;
-    rest?: { [key: string]: string | number | boolean };
-};
+}
 
 function useCombinedRefs<T = HTMLElement>(
     ...refs: Array<React.MutableRefObject<T> | React.LegacyRef<T>>

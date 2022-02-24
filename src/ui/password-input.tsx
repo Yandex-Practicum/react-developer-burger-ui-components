@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { Input } from './input';
 
-export const PasswordInput: React.FC<{
+interface TPasswordInputInterface
+    extends Omit<React.HTMLProps<HTMLInputElement>, 'size' | 'type' | 'ref'> {
     value: string;
     placeholder?: string;
     size?: 'default' | 'small';
     icon?: 'HideIcon' | 'ShowIcon' | 'EditIcon';
     extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
-    rest?: { [key: string]: string | number | boolean };
-}> = ({
+}
+
+export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     value,
     placeholder = 'Пароль',
     onChange,

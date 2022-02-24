@@ -1,14 +1,15 @@
 import React, { SyntheticEvent } from 'react';
 import styles from './button.module.css';
 
-export const Button: React.FC<{
+interface Props extends Omit<React.HTMLProps<HTMLButtonElement>, 'type' | 'size'> {
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
     onClick?: (() => void) | ((e: SyntheticEvent) => void);
-    htmlType?: 'button' | 'submit' | 'reset';
     extraClass?: string;
-    rest?: { [key: string]: string | number | boolean };
-}> = ({
+    htmlType: 'button' | 'submit' | 'reset';
+}
+
+export const Button: React.FC<Props> = ({
     children,
     type = 'primary',
     size = 'medium',

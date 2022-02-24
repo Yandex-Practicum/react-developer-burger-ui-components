@@ -6,15 +6,17 @@ const validateEmail = (email: string) => {
     return re.test(email);
 };
 
-export const EmailInput: React.FC<{
+interface TEmailInputInterface
+    extends Omit<React.HTMLProps<HTMLInputElement>, 'size' | 'type' | 'ref'> {
     value: string;
     size?: 'default' | 'small';
     placeholder?: string;
     isIcon?: boolean;
     extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
-    rest?: { [key: string]: string | number | boolean };
-}> = ({
+}
+
+export const EmailInput: React.FC<TEmailInputInterface> = ({
     value,
     onChange,
     size = 'default',
