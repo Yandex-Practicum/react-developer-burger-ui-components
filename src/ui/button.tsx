@@ -1,14 +1,16 @@
 import React, { SyntheticEvent } from 'react';
 import styles from './button.module.css';
 
-export const Button: React.FC<{
-    type?: 'secondary' | 'primary';
-    size?: 'small' | 'medium' | 'large';
-    onClick?: (() => void) | ((e: SyntheticEvent) => void);
-    disabled?: boolean;
-    name?: string;
-    htmlType?: 'button' | 'submit' | 'reset';
-}> = ({
+export const Button: React.FC<
+    React.PropsWithChildren<{
+        type?: 'secondary' | 'primary';
+        size?: 'small' | 'medium' | 'large';
+        onClick?: (() => void) | ((e: SyntheticEvent) => void);
+        disabled?: boolean;
+        name?: string;
+        htmlType?: 'button' | 'submit' | 'reset';
+    }>
+> = ({
     children,
     type = 'primary',
     size = 'medium',
