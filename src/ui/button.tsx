@@ -1,5 +1,6 @@
+import clsx from 'clsx';
 import React, { SyntheticEvent } from 'react';
-import styles from './button.module.css';
+import './button.css';
 
 interface Props extends Omit<React.HTMLProps<HTMLButtonElement>, 'type' | 'size'> {
     type?: 'secondary' | 'primary';
@@ -18,15 +19,16 @@ export const Button: React.FC<Props> = ({
     extraClass = '',
     ...rest
 }) => {
-    const className = `${styles.button} ${
-        type === 'primary' ? styles.button_type_primary : styles.button_type_secondary
-    } ${
-        size === 'medium'
-            ? styles.button_size_medium
-            : size === 'small'
-            ? styles.button_size_small
-            : styles.button_size_large
-    } ${extraClass}`;
+    const className = clsx(
+        'button',
+        {
+            [`button_type_${type}`]: type,
+        },
+        {
+            [`button_size_${size}`]: size,
+        },
+        extraClass
+    );
 
     return (
         <button type={htmlType} onClick={onClick} className={className} {...rest}>

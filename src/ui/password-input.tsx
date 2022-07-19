@@ -21,7 +21,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     ...rest
 }) => {
     const [visible, setVisible] = useState(false);
-    const [currentIcon, setCurrentIcon] = useState(icon);
+    const [currentIcon, setCurrentIcon] = useState<TPasswordInputInterface['icon']>(icon);
     const [fieldDisabled, setDisabled] = useState(icon === 'EditIcon');
     const [error, setError] = useState(false);
 
