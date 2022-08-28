@@ -2,6 +2,7 @@ import { Button } from './ui/button';
 import { Logo } from './ui/logo';
 import { ConstructorElement } from './ui/constructor-element';
 import { Tab } from './ui/tab';
+import { FormattedDate } from './ui/formatted-date/formatted-date';
 import { Input } from './ui/input';
 import { Counter } from './ui/counter';
 import { EmailInput } from './ui/email-input';
@@ -35,6 +36,7 @@ export {
     Logo,
     ConstructorElement,
     Tab,
+    FormattedDate,
     Input,
     Counter,
     EmailInput,
