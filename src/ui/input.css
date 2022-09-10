@@ -126,12 +126,12 @@ input:-webkit-autofill:active
 }
 
 .input_size_default {
-  width: 320px;
+  width: 480px;
   min-height: 64px;
 }
 
 .input_size_small {
-  width: 304px;
+  width: 480px;
   min-height: 48px;
   padding-left: calc(var(--offset-base-variable)  * 10);
   padding-right: calc(var(--offset-base-variable)  * 10);

@@ -1,11 +1,12 @@
 .tab {
   cursor: pointer;
   background-color: var(--background-alt);
-  min-width: 120px;
+  min-width: 200px;
   text-align: center;
   box-shadow: inset 0px -1px 0px #2F2F37;
   color: var(--text-inactive-color);
   transition: var(--common-transition);
+  box-sizing: border-box;
 }
 
 .tab:hover {

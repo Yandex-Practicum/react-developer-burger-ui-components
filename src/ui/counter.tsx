@@ -1,15 +1,23 @@
+import clsx from 'clsx';
 import React from 'react';
-import styles from './counter.module.css';
+import './counter.css';
 
 export const Counter: React.FC<{
     count: number;
     size?: 'default' | 'small';
-}> = ({ count = 0, size = 'default' }: { count: number; size?: 'default' | 'small' }) => {
-    const className = `${styles.counter} ${styles[size]}`;
+    extraClass?: string;
+}> = ({ count = 0, size = 'default', extraClass = '' }) => {
+    const className = clsx(
+        'counter',
+        {
+            [size]: size,
+        },
+        extraClass
+    );
 
     return (
         <div className={className}>
-            <p className={styles.counter__num}>{count}</p>
+            <p className="counter__num">{count}</p>
         </div>
     );
 };
