@@ -2,11 +2,13 @@ import clsx from 'clsx';
 import React from 'react';
 import './tab.css';
 
-export const Tab: React.FC<{
-    active: boolean;
-    value: string;
-    onClick: (value: string) => void;
-}> = ({ active, value, children, onClick: handleClick }) => {
+export const Tab: React.FC<
+    React.PropsWithChildren<{
+        active: boolean;
+        value: string;
+        onClick: (value: string) => void;
+    }>
+> = ({ active, value, children, onClick: handleClick }) => {
     const className = clsx(
         'tab',
         {

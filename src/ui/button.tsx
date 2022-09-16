@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import React, { SyntheticEvent } from 'react';
 import './button.css';
 
-interface Props extends Omit<React.HTMLProps<HTMLButtonElement>, 'type' | 'size'> {
+interface Props
+    extends React.PropsWithChildren<Omit<React.HTMLProps<HTMLButtonElement>, 'type' | 'size'>> {
     type?: 'secondary' | 'primary';
     size?: 'small' | 'medium' | 'large';
     onClick?: (() => void) | ((e: SyntheticEvent) => void);
