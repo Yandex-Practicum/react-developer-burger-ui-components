@@ -13,4 +13,4 @@ import { Tab } from '@ya.praktikum/react-developer-burger-ui-components'
 ```
 
 ## Документация
-Интерактивная документация находится [здесь](https://yandex-practicum.github.io/react-developer-burger-ui-components/)
+Интерактивная документация находится [здесь](https://yandex-practicum.github.io/react-developer-burger-ui-components/docs)
