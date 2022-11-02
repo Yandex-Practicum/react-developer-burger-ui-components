@@ -3,13 +3,21 @@ name: Button
 route: /button
 ---
 
-import { Playground, Props } from 'docz'
+import { Playground } from 'docz'
 import { Button }  from '../';
+import { Props } from './components/props';
 
 # Button
 
-## Properties
-<Props of={Button} />
+## Custom properties
+
+<Props whiteList={[
+    'type',
+    'size',
+    'onClick',
+    'extraClass',
+    'htmlType',
+]} of={Button} />
 
 ## Primary small
 
@@ -46,3 +54,8 @@ import { Button }  from '../';
 <Playground>
     <Button type="secondary" size="large">Нажми на меня</Button>
 </Playground>
+
+
+## All properties
+
+<Props of={Button} />
