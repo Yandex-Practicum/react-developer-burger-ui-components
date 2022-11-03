@@ -2,15 +2,23 @@
 name: EmailInput
 route: /email-input
 ---
-import { Playground, Props } from 'docz'
+import { Playground } from 'docz'
 import { EmailInput }  from '../';
+import { Props } from './components/props';
 
 
 # EmailInput
 
-## Properties
+## Custom properties
 
-<Props of={EmailInput} />
+<Props whiteList={[
+    'value',
+    'size',
+    'placeholder',
+    'isIcon',
+    'extraClass',
+    'onChange',
+]} of={EmailInput} />
 
 ## Basic usage
 
@@ -31,3 +39,6 @@ import { EmailInput }  from '../';
 
 
 
+## All properties
+
+<Props of={EmailInput} />

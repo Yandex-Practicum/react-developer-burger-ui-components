@@ -2,15 +2,31 @@
 name: Input
 route: /input
 ---
-import { Playground, Props } from 'docz'
+import { Playground } from 'docz'
 import { Input }  from '../';
+import { Props } from './components/props';
 
 
 # Input
 
-## Properties
+## Custom properties
 
-<Props of={Input} />
+<Props whiteList={[
+    'value',
+    'type',
+    'placeholder',
+    'success',
+    'error',
+    'disabled',
+    'icon',
+    'errorText',
+    'size',
+    'extraClass',
+    'onChange',
+    'onIconClick',
+    'onBlur',
+    'onFocus',
+]} of={Input} />
 
 ## Basic usage
 
@@ -43,4 +59,7 @@ import { Input }  from '../';
 
 
 
+## All properties
+
+<Props of={Input} />
 
