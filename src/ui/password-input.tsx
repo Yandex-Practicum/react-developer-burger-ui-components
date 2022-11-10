@@ -8,6 +8,7 @@ interface TPasswordInputInterface
     size?: 'default' | 'small';
     icon?: 'HideIcon' | 'ShowIcon' | 'EditIcon';
     extraClass?: string;
+    onIconClick: () => void;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
@@ -18,6 +19,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     size,
     icon = 'ShowIcon',
     extraClass = '',
+    onIconClick: onIconClickProp,
     ...rest
 }) => {
     const [visible, setVisible] = useState(false);
@@ -28,6 +30,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onIconClick = () => {
+        onIconClickProp();
         if (currentIcon === 'ShowIcon') {
             setVisible(true);
             setCurrentIcon('HideIcon');
