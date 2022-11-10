@@ -24,7 +24,7 @@ export const EmailInput: React.FC<TEmailInputInterface> = ({
     placeholder = 'E-mail',
     isIcon = false,
     extraClass = '',
-    onIconClick: onClickProps,
+    onIconClick: onIconClickProp,
     ...rest
 }) => {
     const [fieldDisabled, setDisabled] = useState(isIcon);
@@ -34,7 +34,7 @@ export const EmailInput: React.FC<TEmailInputInterface> = ({
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onIconClick = () => {
-        onClickProps();
+        onIconClickProp();
         setDisabled(false);
         setTimeout(() => inputRef.current?.focus(), 0);
     };
