@@ -1,6 +1,6 @@
 {
   "name": "@ya.praktikum/react-developer-burger-ui-components",
-  "version": "1.13.9",
+  "version": "1.14.0",
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
