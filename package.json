@@ -28,7 +28,8 @@
     }
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "clsx": "^1.1.1",
+    "plural-ru": "^2.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
