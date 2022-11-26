@@ -1,0 +1,18 @@
+.burger-ingredient {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.burger-ingredient__cost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-ingredient__text {
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+.order-card {
+    display: block;
+    text-decoration: none;
+    color: unset;
+    background-color: #1c1c21;
+    border-radius: 40px;
+    min-width: 576px;
+    box-sizing: border-box;
+}
+
+.order-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-card__name {
+    text-align: left;
+}
+
+.order-card__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-card__ingredients {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.order-card__img-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: #801ab3 solid 2px;
+    background-color: #1c1c21;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.order-card__img {
+    position: relative;
+    right: -25px;
+    width: 112px;
+    height: 56px;
+}
+
+.order-card__remains {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order-card__total {
+    vertical-align: top;
+}
