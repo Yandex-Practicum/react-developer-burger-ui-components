@@ -9,7 +9,6 @@ import { EmailInput } from './ui/email-input';
 import { PasswordInput } from './ui/password-input';
 import { BurgerIngredient } from './ui/burger-ingredient';
 import { OrderCard } from './ui/order-card';
-import { OrderStatus } from './ui/order-status';
 import {
     BurgerIcon,
     CloseIcon,
@@ -46,7 +45,6 @@ export {
     PasswordInput,
     BurgerIngredient,
     OrderCard,
-    OrderStatus,
     BurgerIcon,
     CloseIcon,
     CheckMarkIcon,

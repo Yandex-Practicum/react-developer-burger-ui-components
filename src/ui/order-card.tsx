@@ -65,7 +65,7 @@ export const OrderCard: React.FC<Props> = ({
                         return (
                             <li
                                 className="order-card__img-wrap"
-                                style={{ right: right }}
+                                style={{ right: right, zIndex: -index }}
                                 key={index}
                             >
                                 <img
