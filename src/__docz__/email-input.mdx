@@ -30,7 +30,7 @@ import { Props } from './components/props';
         };
         return (
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <EmailInput onChange={onChange} value={value} name={'email'} placeholder='Логин' isIcon={true} extraClass='mb-2' />
+                <EmailInput onChange={onChange} value={value} name={'email'} placeholder='Логин' isIcon={true}   checkValid={(isValid) => console.log(isValid)}extraClass='mb-2' />
                 <EmailInput onChange={onChange} value={value} name={'email'} isIcon={false} />
             </div>
         )

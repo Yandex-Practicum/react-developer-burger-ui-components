@@ -7,6 +7,8 @@ interface TPasswordInputInterface
     placeholder?: string;
     size?: 'default' | 'small';
     icon?: 'HideIcon' | 'ShowIcon' | 'EditIcon';
+    errorText?: string;
+    checkValid?: (isValid: boolean) => void;
     extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
@@ -14,6 +16,8 @@ interface TPasswordInputInterface
 export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     value,
     placeholder = 'Пароль',
+    errorText = 'Некорректный пароль',
+    checkValid,
     onChange,
     size,
     icon = 'ShowIcon',
@@ -40,6 +44,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
 
     const validateField = (value: string) => {
         setError(value.length < 6);
+        checkValid?.(value.length >= 6);
     };
 
     const onFocus = () => {
@@ -73,7 +78,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
             onFocus={onFocus}
             error={error}
             onIconClick={onIconClick}
-            errorText={'Некорректный пароль'}
+            errorText={errorText}
             size={size === 'small' ? 'small' : 'default'}
             disabled={fieldDisabled}
             extraClass={extraClass}
