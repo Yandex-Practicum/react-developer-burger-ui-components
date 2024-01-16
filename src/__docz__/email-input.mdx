@@ -2,15 +2,23 @@
 name: EmailInput
 route: /email-input
 ---
-import { Playground, Props } from 'docz'
+import { Playground } from 'docz'
 import { EmailInput }  from '../';
+import { Props } from './components/props';
 
 
 # EmailInput
 
-## Properties
+## Custom properties
 
-<Props of={EmailInput} />
+<Props whiteList={[
+    'value',
+    'size',
+    'placeholder',
+    'isIcon',
+    'extraClass',
+    'onChange',
+]} of={EmailInput} />
 
 ## Basic usage
 
@@ -20,9 +28,17 @@ import { EmailInput }  from '../';
         const onChange = (e) => {
             setValue(e.target.value);
         };
-        return <EmailInput onChange={onChange} value={value} name={'email'} />;
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <EmailInput onChange={onChange} value={value} name={'email'} placeholder='Логин' isIcon={true} extraClass='mb-2' />
+                <EmailInput onChange={onChange} value={value} name={'email'} isIcon={false} />
+            </div>
+        )
    }}
 </Playground>
 
 
 
+## All properties
+
+<Props of={EmailInput} />

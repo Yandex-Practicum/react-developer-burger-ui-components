@@ -5,22 +5,22 @@ import * as Icons from './icons';
 import './input.css';
 import { TICons } from './icons';
 
-type TInputInterface = {
+interface TInputInterface extends Omit<React.HTMLProps<HTMLInputElement>, 'size'> {
+    value: string;
     type?: 'text' | 'email' | 'password';
     placeholder?: string;
-    value: string;
-    name?: string;
     success?: boolean;
     error?: boolean;
     disabled?: boolean;
     icon?: keyof TICons;
     errorText?: string;
     size?: 'default' | 'small';
+    extraClass?: string;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
     onIconClick?(e: React.MouseEvent<HTMLDivElement>): void;
     onBlur?(e?: React.FocusEvent<HTMLInputElement>): void;
     onFocus?(e?: React.FocusEvent<HTMLInputElement>): void;
-};
+}
 
 function useCombinedRefs<T = HTMLElement>(
     ...refs: Array<React.MutableRefObject<T> | React.LegacyRef<T>>
@@ -46,7 +46,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             onChange,
             icon,
             onIconClick,
-            name,
             success,
             error,
             value,
@@ -55,6 +54,8 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
             onBlur,
             onFocus,
             size = 'default',
+            extraClass = '',
+            ...rest
         },
         forwardedRef
     ) => {
@@ -132,7 +133,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
         );
 
         return (
-            <div className={'input__container'}>
+            <div className={`${'input__container'} ${extraClass}`}>
                 <div
                     /*eslint no-useless-computed-key: "off"*/
                     className={clsx('input', {
@@ -167,9 +168,9 @@ export const Input = React.forwardRef<HTMLInputElement, TInputInterface>(
                         type={type}
                         ref={ref}
                         onChange={onChange}
-                        name={name}
                         value={value}
                         disabled={disabled}
+                        {...rest}
                     />
                     {iconToRender}
                 </div>
