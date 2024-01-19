@@ -11,7 +11,7 @@ export const getIconColor = (type: TIconTypes): string => {
             : type === 'success'
             ? '#00CCCC'
             : type === 'disabled'
-            ? '3A3A55'
+            ? '#3A3A55'
             : '#F2F2F3'
     }`;
 };
