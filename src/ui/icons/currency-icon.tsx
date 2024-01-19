@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { getIconColor, TIconProps } from './utils';
 
-export const CurrencyIcon = ({ type }: TIconProps) => {
+export const CurrencyIcon: FC<TIconProps> = ({ type, className }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ export const CurrencyIcon = ({ type }: TIconProps) => {
             height="24"
             viewBox="0 0 24 24"
             fill={getIconColor(type)}
+            className={className}
         >
             <path d="M10.3849 2.65561C10.5818 2.18895 10.0397 1.75899 9.63011 2.05689L1.41184 8.03382C1.15309 8.222 1.00001 8.52262 1.00001 8.84256V13.4828C1.00001 13.6932 1.13171 13.8811 1.32948 13.9529L4.15637 14.9785C4.65685 15.1601 5.21185 14.9177 5.41879 14.4271L10.3849 2.65561Z" />
             <path d="M1.62116 15.9076C1.32217 15.7916 1.00001 16.0122 1 16.3329C1 16.4889 1.07968 16.634 1.21127 16.7178L10.2307 22.4574C10.3326 22.5223 10.4408 22.3844 10.3536 22.3008L5.22556 17.3879C5.13043 17.2968 5.01823 17.2254 4.89541 17.1777L1.62116 15.9076Z" />

@@ -1,4 +1,6 @@
 import { Button } from './ui/button';
+import { AddButton } from './ui/add-button';
+import { RefreshButton } from './ui/refresh-button';
 import { Logo } from './ui/logo';
 import { ConstructorElement } from './ui/constructor-element';
 import { Tab } from './ui/tab';
@@ -7,6 +9,7 @@ import { Input } from './ui/input';
 import { Counter } from './ui/counter';
 import { EmailInput } from './ui/email-input';
 import { PasswordInput } from './ui/password-input';
+import { MoveButton } from './ui/move-button';
 import {
     BurgerIcon,
     CloseIcon,
@@ -33,6 +36,8 @@ import './ui/box.css';
 
 export {
     Button,
+    AddButton,
+    RefreshButton,
     Logo,
     ConstructorElement,
     Tab,
@@ -58,4 +63,5 @@ export {
     ArrowUpIcon,
     ArrowDownIcon,
     MenuIcon,
+    MoveButton,
 };

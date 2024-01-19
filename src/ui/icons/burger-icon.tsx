@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { getIconColor, TIconProps } from './utils';
 
-export const BurgerIcon = ({ type }: TIconProps) => {
+export const BurgerIcon: FC<TIconProps> = ({ type, className }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ export const BurgerIcon = ({ type }: TIconProps) => {
             height="24"
             viewBox="0 0 24 24"
             fill={getIconColor(type)}
+            className={className}
         >
             <path
                 fillRule="evenodd"
