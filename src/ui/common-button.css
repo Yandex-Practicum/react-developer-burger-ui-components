@@ -1,6 +1,7 @@
 .common_button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   cursor: pointer;
   transition: var(--common-transition);

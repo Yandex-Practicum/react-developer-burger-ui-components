@@ -1,18 +1,24 @@
 import clsx from 'clsx';
-import React, { SyntheticEvent } from 'react';
+import React, { FC, ButtonHTMLAttributes } from 'react';
 import './common-button.css';
 import { RefreshIcon } from './icons';
 
-export const RefreshButton: React.FC<{
-    onClick: (() => void) | ((e: SyntheticEvent) => void);
+type TProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     text?: string;
-    htmlType?: 'button' | 'submit' | 'reset';
     extraClass?: string;
-}> = ({ onClick, text = 'Обновить', htmlType = 'button', extraClass = '' }) => {
-    const className = clsx('common_button', extraClass);
+};
+
+export const RefreshButton: FC<TProps> = ({
+    text = 'Обновить',
+    type = 'button',
+    extraClass,
+    className,
+    ...rest
+}) => {
+    const classNames = clsx('common_button', extraClass, className);
 
     return (
-        <button type={htmlType} className={className} onClick={onClick}>
+        <button type={type} className={classNames} {...rest}>
             <RefreshIcon type="primary" />
             {text}
         </button>

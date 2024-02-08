@@ -1,19 +1,29 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { FC, HTMLProps } from 'react';
 import './move-button.css';
 import { ArrowDownIcon, ArrowUpIcon } from './icons';
 
-export const MoveButton: React.FC<{
+type TProps = HTMLProps<HTMLDivElement> & {
     isUpDisabled: boolean;
     isDownDisabled: boolean;
     handleMoveDown: () => void;
     handleMoveUp: () => void;
     extraClass?: string;
-}> = ({ isUpDisabled, isDownDisabled, handleMoveDown, handleMoveUp, extraClass = '' }) => {
-    const className = clsx('move_button_container', extraClass);
+};
+
+export const MoveButton: FC<TProps> = ({
+    isUpDisabled,
+    isDownDisabled,
+    handleMoveDown,
+    handleMoveUp,
+    extraClass,
+    className,
+    ...rest
+}) => {
+    const classNames = clsx('move_button_container', extraClass, className);
 
     return (
-        <div className={className}>
+        <div className={classNames} {...rest}>
             <button className="move_button" disabled={isUpDisabled} onClick={handleMoveUp}>
                 <ArrowUpIcon type={isUpDisabled ? 'disabled' : 'primary'} />
             </button>

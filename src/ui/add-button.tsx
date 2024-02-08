@@ -1,18 +1,24 @@
 import clsx from 'clsx';
-import React, { SyntheticEvent } from 'react';
+import React, { FC, ButtonHTMLAttributes } from 'react';
 import './common-button.css';
 import { PlusIcon } from './icons';
 
-export const AddButton: React.FC<{
-    onClick: (() => void) | ((e: SyntheticEvent) => void);
+type TProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     text?: string;
-    htmlType?: 'button' | 'submit' | 'reset';
     extraClass?: string;
-}> = ({ onClick, text = 'Добавить', htmlType = 'button', extraClass = '' }) => {
-    const className = clsx('common_button', extraClass);
+};
+
+export const AddButton: FC<TProps> = ({
+    text = 'Добавить',
+    type = 'button',
+    extraClass,
+    className,
+    ...rest
+}) => {
+    const classNames = clsx('common_button', extraClass, className);
 
     return (
-        <button type={htmlType} className={className} onClick={onClick}>
+        <button type={type} className={classNames} {...rest}>
             <PlusIcon type="primary" />
             {text}
         </button>
