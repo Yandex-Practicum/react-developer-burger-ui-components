@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import { CurrencyIcon } from './currency-icon';
 import { BurgerIcon } from './burger-icon';
 import { LockIcon } from './lock-icon';
@@ -15,27 +17,30 @@ import { InfoIcon } from './info-icon';
 import { ShowIcon } from './show-icon';
 import { HideIcon } from './hide-icon';
 import { LogoutIcon } from './logout-icon';
+import { PlusIcon } from './plus-icon';
+import { RefreshIcon } from './refresh-icon';
 import { TIconProps } from './utils';
-import React from 'react';
 
 export type TICons = {
-    CurrencyIcon: React.FC<TIconProps>;
-    BurgerIcon: React.FC<TIconProps>;
-    LockIcon: React.FC<TIconProps>;
-    DragIcon: React.FC<TIconProps>;
-    DeleteIcon: React.FC<TIconProps>;
-    ArrowUpIcon: React.FC<TIconProps>;
-    ArrowDownIcon: React.FC<TIconProps>;
-    MenuIcon: React.FC<TIconProps>;
-    CloseIcon: React.FC<TIconProps>;
-    CheckMarkIcon: React.FC<TIconProps>;
-    ListIcon: React.FC<TIconProps>;
-    ProfileIcon: React.FC<TIconProps>;
-    EditIcon: React.FC<TIconProps>;
-    InfoIcon: React.FC<TIconProps>;
-    ShowIcon: React.FC<TIconProps>;
-    HideIcon: React.FC<TIconProps>;
-    LogoutIcon: React.FC<TIconProps>;
+    CurrencyIcon: FC<TIconProps>;
+    BurgerIcon: FC<TIconProps>;
+    LockIcon: FC<TIconProps>;
+    DragIcon: FC<TIconProps>;
+    DeleteIcon: FC<TIconProps>;
+    ArrowUpIcon: FC<TIconProps>;
+    ArrowDownIcon: FC<TIconProps>;
+    MenuIcon: FC<TIconProps>;
+    CloseIcon: FC<TIconProps>;
+    CheckMarkIcon: FC<TIconProps>;
+    ListIcon: FC<TIconProps>;
+    ProfileIcon: FC<TIconProps>;
+    EditIcon: FC<TIconProps>;
+    InfoIcon: FC<TIconProps>;
+    ShowIcon: FC<TIconProps>;
+    HideIcon: FC<TIconProps>;
+    LogoutIcon: FC<TIconProps>;
+    PlusIcon: FC<TIconProps>;
+    RefreshIcon: FC<TIconProps>;
 };
 
 export {
@@ -56,4 +61,6 @@ export {
     ShowIcon,
     HideIcon,
     LogoutIcon,
+    PlusIcon,
+    RefreshIcon,
 };

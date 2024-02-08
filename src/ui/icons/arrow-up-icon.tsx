@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { getIconColor, TIconProps } from './utils';
 
-export const ArrowUpIcon = ({ type, onClick }: TIconProps) => {
+export const ArrowUpIcon: FC<TIconProps> = ({ type, className, onClick }) => {
     return (
         <svg
             width="24"
@@ -10,6 +10,7 @@ export const ArrowUpIcon = ({ type, onClick }: TIconProps) => {
             fill={getIconColor(type)}
             onClick={onClick}
             xmlns="http://www.w3.org/2000/svg"
+            className={className}
         >
             <path
                 d="M10.9541 10.3525C11.5164 9.88251 12.4836 9.88251 13.0459 10.3525L17.6243 14.1786C18.4585 14.8758 17.8129 16 16.5783 16H7.42166C6.1871 16 5.54152 14.8758 6.37574 14.1786L10.9541 10.3525Z"

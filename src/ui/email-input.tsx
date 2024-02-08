@@ -13,11 +13,15 @@ interface TEmailInputInterface
     placeholder?: string;
     isIcon?: boolean;
     extraClass?: string;
+    errorText?: string;
+    checkValid?: (isValid: boolean) => void;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
 export const EmailInput: React.FC<TEmailInputInterface> = ({
     value,
+    errorText = 'Ой, произошла ошибка!',
+    checkValid,
     onChange,
     size = 'default',
     placeholder = 'E-mail',
@@ -37,7 +41,9 @@ export const EmailInput: React.FC<TEmailInputInterface> = ({
     };
 
     const validateField = (value: string) => {
-        setError(!validateEmail(value));
+        const isValid = validateEmail(value);
+        setError(!isValid);
+        checkValid?.(isValid);
     };
 
     const onFocus = () => {
@@ -52,6 +58,7 @@ export const EmailInput: React.FC<TEmailInputInterface> = ({
         }
         isIcon && setDisabled(true);
     };
+
     return (
         <Input
             type="email"
@@ -65,7 +72,7 @@ export const EmailInput: React.FC<TEmailInputInterface> = ({
             error={error}
             disabled={fieldDisabled}
             onIconClick={onIconClick}
-            errorText={'Ой, произошла ошибка!'}
+            errorText={errorText}
             size={size}
             extraClass={extraClass}
             {...rest}

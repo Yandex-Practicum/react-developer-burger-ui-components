@@ -1,0 +1,29 @@
+.move_button_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.move_button {
+  max-height: 24px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--common-transition);
+}
+
+.move_button:hover {
+  opacity: 0.9;
+}
+
+.move_button:disabled {
+  cursor: default;
+}
+
+.icon_disabled {
+  fill: var(--colors-button-inactive);
+}

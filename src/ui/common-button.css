@@ -1,0 +1,23 @@
+.common_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--common-transition);
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: var(--text-primary-color);
+
+  font-family: "Jet Brains Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.common_button:hover {
+  opacity: 0.9;
+}

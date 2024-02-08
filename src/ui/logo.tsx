@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-export const Logo = () => {
+export const Logo: FC<{ className?: string }> = ({ className }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,7 @@ export const Logo = () => {
             height="50"
             viewBox="0 0 290 50"
             fill="none"
+            className={className}
         >
             <g filter="url(#filter0_f)">
                 <path
