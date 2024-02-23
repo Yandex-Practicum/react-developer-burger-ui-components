@@ -8,6 +8,7 @@ interface TPasswordInputInterface
     size?: 'default' | 'small';
     icon?: 'HideIcon' | 'ShowIcon' | 'EditIcon';
     extraClass?: string;
+    onIconClick?: () => void;
     onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
@@ -18,6 +19,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
     size,
     icon = 'ShowIcon',
     extraClass = '',
+    onIconClick,
     ...rest
 }) => {
     const [visible, setVisible] = useState(false);
@@ -27,7 +29,8 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const onIconClick = () => {
+    const handleOnIconClick = () => {
+        onIconClick?.();
         if (currentIcon === 'ShowIcon') {
             setVisible(true);
             setCurrentIcon('HideIcon');
@@ -72,7 +75,7 @@ export const PasswordInput: React.FC<TPasswordInputInterface> = ({
             onBlur={onBlur}
             onFocus={onFocus}
             error={error}
-            onIconClick={onIconClick}
+            onIconClick={handleOnIconClick}
             errorText={'Некорректный пароль'}
             size={size === 'small' ? 'small' : 'default'}
             disabled={fieldDisabled}
